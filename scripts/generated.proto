@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message LedCommands {
+  uint32 brightness_1 = 1;
+  uint32 brightness_2 = 2;
+  uint32 brightness_3 = 3;
+}
+
+message AhtTelemetry {
+  uint32 temperature = 1;
+  uint32 humidity = 2;
+}
