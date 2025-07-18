@@ -10,11 +10,11 @@ from google.protobuf.message import DecodeError
 def get_serial_port():
     ports = serial.tools.list_ports.comports()
 
-    if not ports:
-        print("could not find usbserial")
+    if not ports or len(ports) == 0:
+        print("could not find a usbserial device")
+        return
 
-    ports_len = len(ports)
-    if ports_len > 1:
+    if len(ports) > 1:
         for index, port in enumerate(ports):
             print(f"{index}: {port}")
 
