@@ -24,3 +24,7 @@ Session.vim
 __pycache__/
 *.py[codz]
 *$py.class
+
+# protobuf generated files
+*.pb.c
+*.pb.h

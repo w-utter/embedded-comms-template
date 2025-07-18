@@ -23,4 +23,11 @@ pico_sdk_init()
 
 project(embedded C CXX ASM)
 
+include_directories($ENV{NANOPB_PATH})
 add_subdirectory(src)
+
+add_library(nanopb STATIC
+    $ENV{NANOPB_PATH}/pb_common.c
+    $ENV{NANOPB_PATH}/pb_encode.c
+    $ENV{NANOPB_PATH}/pb_decode.c
+)

@@ -17,6 +17,8 @@ target_include_directories(main PRIVATE
 
 target_link_libraries(main
         pico_stdlib
+        nanopb
+        hardware_i2c
 )
 
 pico_add_extra_outputs(main)
